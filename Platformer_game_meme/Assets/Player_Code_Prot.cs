@@ -6,7 +6,7 @@ public class Player_Code_Prot : MonoBehaviour
 {
     public int playerSpeed = 10;
     public bool facingRight = true;
-    public int playerJumpPower = 750;
+    public int playerJumpPower = 500;
     public float moveX;
     public bool isGrounded;
 
