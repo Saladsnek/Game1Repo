@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f677664a1b3ac0b4482f83e1808decb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
+  playerSpeed: 5
   facingRight: 0
   playerJumpPower: 500
   moveX: 0
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 1349989007}
   - component: {fileID: 1349989006}
   - component: {fileID: 1349989008}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Placeholder-Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349989003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2829914, y: -1.62, z: 0}
+  m_LocalPosition: {x: 2.2829914, y: -3.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3e9ca4f7f17c24483125f0fa13974d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemySpeed: 1
+  EnemySpeed: 5
   XMoveDirection: 1
 --- !u!1 &2116675683
 GameObject:
