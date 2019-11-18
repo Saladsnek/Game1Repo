@@ -7,15 +7,15 @@ public class Player_Health : MonoBehaviour
 {
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (gameObject.transform.position.y < -7)
         {
             Die();
         }
     }
-    void Die()
+    public void Die()
     {
-        SceneManager.LoadScene("Prototype_Scene");
+        SceneManager.LoadScene("GameOverScene");
     }
 }

@@ -20,12 +20,21 @@ public class Player_Score : MonoBehaviour
         playerScoreUI.gameObject.GetComponent<Text>().text = ("Score : " + playerScore);
         if (timeLeft < 0.1f)
         {
-            SceneManager.LoadScene("Prototype_Scene");
+            SceneManager.LoadScene("GameOverScene");
         }
     }
     void OnTriggerEnter2D (Collider2D trig)
     {
-        CountScore();
+        if (trig.gameObject.name == "EndLevel")
+        {
+            CountScore();
+            SceneManager.LoadScene("VictoryScene");
+        }
+        if (trig.gameObject.name == "Upvote")
+        {
+            playerScore += 10;
+            Destroy(trig.gameObject);
+        }
     }
     void CountScore()
     {

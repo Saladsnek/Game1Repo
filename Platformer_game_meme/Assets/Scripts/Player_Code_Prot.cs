@@ -6,7 +6,7 @@ public class Player_Code_Prot : MonoBehaviour
 {
     public int playerSpeed = 10;
     public bool facingRight = true;
-    public int playerJumpPower = 500;
+    public int playerJumpPower = 400;
     public float moveX;
     public bool isGrounded;
 
@@ -14,6 +14,7 @@ public class Player_Code_Prot : MonoBehaviour
     void Update()
     {
         PlayerMove();
+        PlayerRaycast();
     }
 
     void PlayerMove()
@@ -55,6 +56,16 @@ public class Player_Code_Prot : MonoBehaviour
         if (col.gameObject.tag == "ground")
         {
             isGrounded = true;
+        }
+    }
+
+    void PlayerRaycast()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+        if (hit != null && hit.collider != null && hit.distance < 1.8f && hit.collider.tag == "enemy")
+        {
+            Debug.Log ("smushed enemy");
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 50);
         }
     }
 }
