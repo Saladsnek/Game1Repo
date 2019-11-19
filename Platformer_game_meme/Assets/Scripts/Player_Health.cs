@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Player_Health : MonoBehaviour
 {
-
     // Update is called once per frame
     public void Update()
     {
@@ -14,6 +13,7 @@ public class Player_Health : MonoBehaviour
             Die();
         }
     }
+
     public void Die()
     {
         SceneManager.LoadScene("GameOverScene");

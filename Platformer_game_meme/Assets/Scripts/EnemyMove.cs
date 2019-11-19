@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EnemyMove : MonoBehaviour
 {
     public int EnemySpeed;
     public int XMoveDirection;
+    public int hp = 5;
+    public GameObject Health;
 
     // Update is called once per frame
     void Update()
@@ -18,8 +21,14 @@ public class EnemyMove : MonoBehaviour
             Flip();
             if (hit.collider.tag == "Player")
             {
-                Destroy(hit.collider.gameObject);
-                SceneManager.LoadScene("GameOverScene");
+                hp = hp - 1;
+                Health.gameObject.GetComponent<Text>().text = ("Health : " + hp);
+                //Destroy(hit.collider.gameObject);
+                //SceneManager.LoadScene("GameOverScene");
+                if (hp < 1)
+                {
+                    SceneManager.LoadScene("GameOverScene");
+                }
             }
         }
     }
