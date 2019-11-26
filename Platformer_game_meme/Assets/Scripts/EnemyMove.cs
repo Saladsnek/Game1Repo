@@ -10,6 +10,7 @@ public class EnemyMove : MonoBehaviour
     public int XMoveDirection;
     public int hp = 5;
     public GameObject Health;
+    public bool facingRight = true;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,7 @@ public class EnemyMove : MonoBehaviour
         if (hit.distance < 0.7f)
         {
             Flip();
+            FlipEnemy();
             if (hit.collider.tag == "Player")
             {
                 hp = hp - 1;
@@ -42,5 +44,13 @@ public class EnemyMove : MonoBehaviour
         {
             XMoveDirection = 1;
         }
+    }
+
+    void FlipEnemy()
+    {
+        facingRight = !facingRight;
+        Vector2 localScale = gameObject.transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
     }
 }
