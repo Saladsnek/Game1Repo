@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7573642806944010305}
   - component: {fileID: 7573642806944010304}
   - component: {fileID: 7573642806944010334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Placeholder-Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemySpeed: 5
   XMoveDirection: 1
-  hp: 5
+  hp: 10
   Health: {fileID: 0}
   facingRight: 1
+  enemyhp1: 50

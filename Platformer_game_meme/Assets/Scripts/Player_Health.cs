@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Player_Health : MonoBehaviour
 {
-    // Update is called once per frame
+    public int playerhp = 10;
+    
     public void Update()
     {
         if (gameObject.transform.position.y < -7)

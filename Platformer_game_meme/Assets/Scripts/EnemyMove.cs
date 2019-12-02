@@ -8,9 +8,10 @@ public class EnemyMove : MonoBehaviour
 {
     public int EnemySpeed;
     public int XMoveDirection;
-    public int hp = 5;
+    public int hp = 10;
     public GameObject Health;
     public bool facingRight = true;
+    public int enemyhp1 = 50;
 
     // Update is called once per frame
     void Update()
@@ -23,14 +24,17 @@ public class EnemyMove : MonoBehaviour
             FlipEnemy();
             if (hit.collider.tag == "Player")
             {
+                hit.collider.gameObject.GetComponent<Player_Health>().playerhp -= 1;
                 hp = hp - 1;
                 Health.gameObject.GetComponent<Text>().text = ("Health : " + hp);
-                //Destroy(hit.collider.gameObject);
-                //SceneManager.LoadScene("GameOverScene");
-                if (hp < 1)
+                if (hit.collider.gameObject.GetComponent<Player_Health>().playerhp < 1)
                 {
                     SceneManager.LoadScene("GameOverScene");
                 }
+                //hp = hp - 1;
+                //Health.gameObject.GetComponent<Text>().text = ("Health : " + hp);
+                //Destroy(hit.collider.gameObject);
+                //SceneManager.LoadScene("GameOverScene");
             }
         }
     }
