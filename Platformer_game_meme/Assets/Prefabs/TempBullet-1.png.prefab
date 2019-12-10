@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4044886641951610696}
   - component: {fileID: 5702880119285867795}
   - component: {fileID: 238056802065134715}
+  - component: {fileID: -5550285402916392872}
   m_Layer: 0
   m_Name: TempBullet-1.png
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4044886641951610696
 Transform:
@@ -88,8 +89,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4577154130182002162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dbc8c25733e0a44e9209cb77c34643e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: 230
+--- !u!114 &-5550285402916392872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4577154130182002162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c799836f78adbc645a90c125e39f0906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

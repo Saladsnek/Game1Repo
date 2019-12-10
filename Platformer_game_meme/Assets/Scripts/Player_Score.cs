@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Player_Score : MonoBehaviour
 {
 
-    private float timeLeft = 120;
+    private float timeLeft = 300;
     public int playerScore = 0;
     public GameObject timeLeftUI;
     public GameObject playerScoreUI;

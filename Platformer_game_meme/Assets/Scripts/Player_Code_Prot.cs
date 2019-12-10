@@ -16,18 +16,19 @@ public class Player_Code_Prot : MonoBehaviour
         PlayerMove();
         PlayerRaycast();
     }
-
+  
     void PlayerMove()
     {
         //CONTROLS
         moveX = Input.GetAxis("Horizontal");
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
+
             Jump();
         }
-            //ANIMATION
-            //PLAYER DIRECTION
-            if (moveX < 0.0f && facingRight == false)
+        //ANIMATION
+        //PLAYER DIRECTION
+        if (moveX < 0.0f && facingRight == false)
         {
             FlipPlayer();
         }
@@ -36,7 +37,7 @@ public class Player_Code_Prot : MonoBehaviour
             FlipPlayer();
         }
         //PHYSICS
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2 (moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
     void Jump()
     {
@@ -48,7 +49,7 @@ public class Player_Code_Prot : MonoBehaviour
     {
         facingRight = !facingRight;
         Vector2 localScale = gameObject.transform.localScale;
-	    localScale.x *= -1;
+        localScale.x *= -1;
         transform.localScale = localScale;
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -64,7 +65,7 @@ public class Player_Code_Prot : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
         if (hit != null && hit.collider != null && hit.distance < 1.3f && hit.collider.tag == "enemy")
         {
-            Debug.Log ("smushed enemy");
+            Debug.Log("smushed enemy");
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 50);
         }
     }

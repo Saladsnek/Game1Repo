@@ -23,12 +23,9 @@ public class ShootWithBullet : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Rigidbody instantiatedProjectile = Instantiate(projectile,
-                                                           transform.position,
-                                                           transform.rotation)
-                as Rigidbody;
+            Rigidbody instantiatedProjectile = Instantiate(projectile,transform.position,transform.rotation) as Rigidbody;
 
-            instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+           // instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
 
         }
     }

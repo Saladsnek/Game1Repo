@@ -17,7 +17,7 @@ public class ShootGun : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        firePoint = transform.FindChild("FirePoint");
+        firePoint = GameObject.Find("FirePoint").transform;
         if (firePoint == null)
         {
             Debug.LogError("No Fire Point");
@@ -34,11 +34,17 @@ public class ShootGun : MonoBehaviour
                 Shoot();
             }
         }
+        else if (Input.GetButton("Fire1") && Time.time > timeToFire)
+        {
+            timeToFire = Time.time + 1 / fireRate;
+            Shoot();
+        }
         else
         {
-            if (Input.GetButton("Fire1") && Time.time > timeToFire)
+            if (Input.GetButton("Fire2") && Time.time > timeToFire)
             {
-                timeToFire = Time.time + 1 / fireRate;
+                timeToFire = Time.time + 1 / (fireRate*2);
+                
                 Shoot();
             }
         }
@@ -48,7 +54,8 @@ public class ShootGun : MonoBehaviour
         Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint (Input.mousePosition).y);
         Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
         RaycastHit2D hit = Physics2D.Raycast(firePointPosition, mousePosition-firePointPosition, 100, whatToHit);
-        Effect();
+  
+        Transform bullet = Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
         Debug.DrawLine(firePointPosition, (mousePosition-firePointPosition)*100, Color.cyan);
         if (hit.collider != null)
         {
@@ -70,10 +77,5 @@ public class ShootGun : MonoBehaviour
                 }
             }
         }
-    }
-
-    void Effect()
-    {
-        Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
     }
 }
