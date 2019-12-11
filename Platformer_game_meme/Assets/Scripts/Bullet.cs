@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Vector3 direction;
-    float speed = 0.5f;
+    float speed = 0.25f;
     private Transform firePoint;
     // Start is called before the first frame update
     void Start()

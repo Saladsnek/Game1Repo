@@ -76,6 +76,14 @@ public class ShootGun : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                 }
             }
+            else if (hit.collider.tag == ("boss"))
+            {
+                hit.collider.gameObject.GetComponent<BossScript>().Bossenemyhp1 -= 10;
+                if (hit.collider.gameObject.GetComponent<BossScript>().Bossenemyhp1 < 1)
+                {
+                    Destroy(hit.collider.gameObject);
+                }
+            }
         }
     }
 }
