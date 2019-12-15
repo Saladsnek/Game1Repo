@@ -278,3 +278,4 @@ MonoBehaviour:
   whatToHit:
     serializedVersion: 2
     m_Bits: 1587
+  BulletTrailPrefab: {fileID: 0}
