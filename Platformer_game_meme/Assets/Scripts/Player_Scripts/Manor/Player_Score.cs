@@ -12,6 +12,12 @@ public class Player_Score : MonoBehaviour
     public GameObject timeLeftUI;
     public GameObject playerScoreUI;
 
+    void Start()
+    {
+        timeLeftUI = GameObject.Find("TimeLeft");
+        playerScoreUI = GameObject.Find("Score");
+    }
+
     // Update is called once per frame
     void Update()
     {

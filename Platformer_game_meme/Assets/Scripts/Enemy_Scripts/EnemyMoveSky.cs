@@ -22,7 +22,7 @@ public class EnemyMoveSky : MonoBehaviour
         {
             Flip();
             FlipEnemy();
-            if (hit.collider.tag == "Player")
+            if (hit.collider != null  &&  hit.collider.tag == "Player")
             {
                 hit.collider.gameObject.GetComponent<Player_Health>().playerhp -= 1;
                 hp = hp - 1;

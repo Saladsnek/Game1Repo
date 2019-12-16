@@ -13,8 +13,19 @@ public class Bullet : MonoBehaviour
         firePoint = GameObject.Find("FirePoint").transform;
         // Debug.Log(gameObject.name + "   " + transform.position);
         Vector2 mousePosition = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+
         Vector2 firePointPosition = new Vector2(firePoint.position.x, firePoint.position.y);
         direction = mousePosition - firePointPosition;
+
+        if (gameObject.name == "bulletUP")
+        {
+            direction = direction + new Vector3(1, 0);
+        }
+        if (gameObject.name == "bulletLOW")
+        {
+            direction = direction - new Vector3(1, 0);
+        }
+       
     }
 
     void Update()
