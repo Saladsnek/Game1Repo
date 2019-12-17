@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2749aa117d1ca684eae49b6df5e66d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
+  fireRate: 3
   Damage: 10
   whatToHit:
     serializedVersion: 2
@@ -31,12 +31,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerArtemis_Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 7798249808831680545, guid: 6bfc97454925b9745be5b7d346fc1ac9,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 404625ee6fba1b840a081c6663b6f344,
-        type: 3}
     - target: {fileID: 7798249808831680546, guid: 6bfc97454925b9745be5b7d346fc1ac9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -97,6 +91,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7798249808831680545, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 404625ee6fba1b840a081c6663b6f344,
+        type: 3}
     - target: {fileID: 7798249809377242915, guid: 6bfc97454925b9745be5b7d346fc1ac9,
         type: 3}
       propertyPath: m_Offset.x

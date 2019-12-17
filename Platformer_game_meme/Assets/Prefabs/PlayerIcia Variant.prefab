@@ -17,7 +17,8 @@ MonoBehaviour:
   whatToHit:
     serializedVersion: 2
     m_Bits: 1587
-  BulletTrailPrefab: {fileID: 0}
+  IciaMinionPrefab: {fileID: 3786217759668428488, guid: 7e9ed6c49c9c31144bdb10dc46b58960,
+    type: 3}
 --- !u!1001 &3658659671315487839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30,12 +31,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerIcia Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 7798249808831680545, guid: 6bfc97454925b9745be5b7d346fc1ac9,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7ba460091e9201d4199cfd54ec1129db,
-        type: 3}
     - target: {fileID: 7798249808831680546, guid: 6bfc97454925b9745be5b7d346fc1ac9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -101,6 +96,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1493227637, guid: 6bfc97454925b9745be5b7d346fc1ac9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.102
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798249808831680545, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ba460091e9201d4199cfd54ec1129db,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bfc97454925b9745be5b7d346fc1ac9, type: 3}
 --- !u!1 &6845147577833557105 stripped

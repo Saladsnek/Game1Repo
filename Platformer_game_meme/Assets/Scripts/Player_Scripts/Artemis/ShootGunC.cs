@@ -5,8 +5,8 @@ using UnityEngine;
 public class ShootGunC : MonoBehaviour
 {
 
-    public float fireRate = 0;
-    public float Damage = 10;
+    public float fireRate = 3;
+    public float Damage = 30;
     public LayerMask whatToHit;
     private float timeToFire = 0;
     private Transform firePoint;
@@ -27,7 +27,7 @@ public class ShootGunC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fireRate == 0)
+        if (fireRate == 3)
         {
             if (Input.GetButtonDown("Fire1"))
             {

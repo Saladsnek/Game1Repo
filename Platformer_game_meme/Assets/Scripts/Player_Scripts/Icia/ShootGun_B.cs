@@ -10,8 +10,9 @@ public class ShootGun_B : MonoBehaviour
     public LayerMask whatToHit;
     private float timeToFire = 0;
     private Transform firePoint;
+    private Transform summonPoint;
 
-    public Transform BulletTrailPrefab;
+    public Transform IciaMinionPrefab;
     //public int enemyhealthGoblin = 50;
 
     // Start is called before the first frame update
@@ -21,6 +22,11 @@ public class ShootGun_B : MonoBehaviour
         if (firePoint == null)
         {
             Debug.LogError("No Fire Point");
+        }
+        summonPoint = GameObject.Find("SummonPoint").transform;
+        if (summonPoint == null)
+        {
+            Debug.LogError("No summon point");
         }
     }
 
@@ -39,14 +45,10 @@ public class ShootGun_B : MonoBehaviour
             timeToFire = Time.time + 1 / fireRate;
             Shoot();
         }
-        else
-        {
-            if (Input.GetButton("Fire2") && Time.time > timeToFire)
-            {
-                timeToFire = Time.time + 1 / (fireRate * 2);
 
-                Shoot();
-            }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            summon();
         }
     }
     void Shoot()
@@ -85,6 +87,11 @@ public class ShootGun_B : MonoBehaviour
                 }
             }
         }
+    }
+    void summon()
+    {
+        Vector2 summonPointPosition = new Vector2(summonPoint.position.x, summonPoint.position.y);
+        Instantiate(IciaMinionPrefab, summonPoint.position, summonPoint.rotation);
     }
 }
 
