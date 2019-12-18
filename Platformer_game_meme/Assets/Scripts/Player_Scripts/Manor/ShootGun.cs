@@ -10,8 +10,11 @@ public class ShootGun : MonoBehaviour
     public LayerMask whatToHit;
     private float timeToFire = 0;
     private Transform firePoint;
+    public AudioClip bulletSound;
+
 
     public Transform BulletTrailPrefab;
+
     //public int enemyhealthGoblin = 50;
 
     // Start is called before the first frame update
@@ -38,6 +41,8 @@ public class ShootGun : MonoBehaviour
         {
             timeToFire = Time.time + 1 / fireRate;
             Shoot();
+            var audio = GetComponent<AudioSource>();
+            audio.PlayOneShot(bulletSound);
         }
         else
         {
@@ -46,6 +51,8 @@ public class ShootGun : MonoBehaviour
                 timeToFire = Time.time + 1 / (fireRate*2);
                 
                 Shoot();
+                var audio = GetComponent<AudioSource>();
+                audio.PlayOneShot(bulletSound);
             }
         }
     }

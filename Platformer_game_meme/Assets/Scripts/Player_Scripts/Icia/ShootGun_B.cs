@@ -11,6 +11,7 @@ public class ShootGun_B : MonoBehaviour
     private float timeToFire = 0;
     private Transform firePoint;
     private Transform summonPoint;
+    public AudioClip bulletSound;
 
     public Transform IciaMinionPrefab;
     //public int enemyhealthGoblin = 50;
@@ -38,6 +39,8 @@ public class ShootGun_B : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Shoot();
+                var audio = GetComponent<AudioSource>();
+                audio.PlayOneShot(bulletSound);
             }
         }
         else if (Input.GetButton("Fire1") && Time.time > timeToFire)

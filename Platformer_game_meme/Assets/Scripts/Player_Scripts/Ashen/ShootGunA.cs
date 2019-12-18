@@ -10,6 +10,7 @@ public class ShootGunA : MonoBehaviour
     public LayerMask whatToHit;
     private float timeToFire = 0;
     private Transform firePoint;
+    public AudioClip bulletSound;
 
     public Transform BulletTrailPrefab;
     //public int enemyhealthGoblin = 50;
@@ -32,6 +33,8 @@ public class ShootGunA : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Shoot();
+                var audio = GetComponent<AudioSource>();
+                audio.PlayOneShot(bulletSound);
             }
         }
         else if (Input.GetButton("Fire1") && Time.time > timeToFire)

@@ -17,6 +17,7 @@ MonoBehaviour:
   whatToHit:
     serializedVersion: 2
     m_Bits: 1587
+  bulletSound: {fileID: 8300000, guid: a8ecc4ef333fd024795f07dc275687e8, type: 3}
   IciaMinionPrefab: {fileID: 3786217759668428488, guid: 7e9ed6c49c9c31144bdb10dc46b58960,
     type: 3}
 --- !u!1001 &3658659671315487839
@@ -86,6 +87,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7798249808831680546, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798249808831680546, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7798249809377242907, guid: 6bfc97454925b9745be5b7d346fc1ac9,
         type: 3}
       propertyPath: Damage
@@ -96,16 +107,41 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1493227637, guid: 6bfc97454925b9745be5b7d346fc1ac9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.102
-      objectReference: {fileID: 0}
     - target: {fileID: 7798249808831680545, guid: 6bfc97454925b9745be5b7d346fc1ac9,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7ba460091e9201d4199cfd54ec1129db,
         type: 3}
+    - target: {fileID: 7798249809377242915, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.24884605
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798249809377242915, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.1398754
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798249809377242915, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.6349798
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798249809377242915, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.15352148
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493227637, guid: 6bfc97454925b9745be5b7d346fc1ac9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647817943059405340, guid: 6bfc97454925b9745be5b7d346fc1ac9,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a8ecc4ef333fd024795f07dc275687e8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bfc97454925b9745be5b7d346fc1ac9, type: 3}
 --- !u!1 &6845147577833557105 stripped
